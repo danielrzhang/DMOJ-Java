@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class MockCCCS2 {
+public class mockccc21s2 {
 
 	private static ArrayList<String> list = new ArrayList<String>();
 
