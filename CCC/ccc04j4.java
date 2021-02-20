@@ -9,9 +9,6 @@ public class ccc04j4 {
 
 		String key = in.readLine();
 		String message = in.readLine().replaceAll("[^a-zA-Z]", "");
-		String[] alphabet = new String[] {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-				"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-
 		int tableWidth = key.length();
 		int tableHeight = (message.length() / key.length()) + 1;
 		String[][] table = new String[tableHeight][tableWidth];

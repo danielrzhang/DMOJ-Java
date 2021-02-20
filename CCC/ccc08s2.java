@@ -13,8 +13,10 @@ public class ccc08s2 {
 			counter = 0;
 			for (int i = 0; i <= input; i++) {
 				for (int j = 0; j <= input; j++) {
-					if ((int) (Math.pow(i, 2)) + (int) (Math.pow(j, 2)) <= (int) (Math.pow(input, 2))) {
+					if (i * i + j * j <= input * input) {
 						counter++;
+					} else {
+						break;
 					}
 				}
 			}
