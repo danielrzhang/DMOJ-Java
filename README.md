@@ -5,5 +5,5 @@ This repository contains solutions to my Java solutions/attempts at solutions fo
 https://dmoj.ca/
 
 # Usernames
-BamTargetShock (Python 3)
-BamTargetShock_Java (Java)
+ - BamTargetShock (Python 3)
+ - BamTargetShock_Java (Java 8)
