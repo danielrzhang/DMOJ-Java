@@ -7,5 +7,5 @@ Do ***NOT*** copy and paste my code! Only use it if you need a nudge in the righ
 https://dmoj.ca/
 
 # Usernames
- - BamTargetShock (Python 3)
  - BamTargetShock_Java (Java 8)
+ - BamTargetShock (Python 3) **(inactive)**
