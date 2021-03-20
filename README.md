@@ -7,5 +7,5 @@ Do ***NOT*** copy and paste my code! Only use my code if you need help for solvi
 https://dmoj.ca/
 
 # Usernames
- - BamTargetShock_Java (Java 8)
+ - BamTargetShock_Java (Java)
  - BamTargetShock (Python 3) **(inactive)**
