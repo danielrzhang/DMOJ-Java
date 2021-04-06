@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class ccc20j2 {
     public static void main(String[] args) {
@@ -17,6 +16,6 @@ public class ccc20j2 {
           dayCounter++;
         }
         System.out.println(dayCounter);
-
+        in.close();
     }
 }
