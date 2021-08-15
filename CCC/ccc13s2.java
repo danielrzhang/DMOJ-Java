@@ -1,54 +1,56 @@
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class ccc13s2 {
-  public static void main(String[] args) throws IOException {
-    BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    
-    int max = Integer.parseInt(in.readLine());
-    int n = Integer.parseInt(in.readLine());
-    Queue<Integer> cars = new LinkedList<Integer>();
-    
-    int car1 = 0;
-    int car2 = 0;
-    int car3 = 0;
-    int car4 = 0;
-    int total = 0;
-    
-    for (int i = 0; i < n; i++) {
-      cars.add(Integer.parseInt(in.readLine()));
-    }
-    
-    car1 = cars.remove();
-    car2 = cars.remove();
-    car3 = cars.remove();
-    car4 = cars.remove();
-    
-    if (car1 + car2 + car3 + car4 > max) {
-      if (car1 <= max) {
-        total = 1;
-      }
-      if (car1 + car2 <= max) {
-        total = 2;
-      }
-      if (car1 + car2 + car3 <= max) {
-        total = 3;
-      }
-      if (car1 + car2 + car3 + car4 <= max) {
-        total = 4;
-      }
-    }
-    
-    else {
-      total = 3;
-      while (car1 + car2 + car3 + car4 <= max) {
-        car1 = car2;
-        car2 = car3;
-        car3 = car4;
-        car4 = cars.remove();
-        total++;
-      }
-    }
-    System.out.println(total);
-  }
+	
+	public static void push(int[] array, int newNum) {
+		for (int i = 1; i < array.length; i++) {
+			array[i - 1] = array[i];
+		}
+		array[array.length - 1] = newNum;
+	}
+	
+	public static int sum(int[] array) {
+		int counter = 0;
+		
+		for (int i = 0; i < array.length; i++) {
+			counter += array[i];
+		}
+		return counter;
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		int maxWeight = Integer.parseInt(in.readLine());
+		int[] bridgeTest = new int[4];
+		
+		int numCars = Integer.parseInt(in.readLine());
+		
+		int[] carArray = new int[numCars];
+		
+		for (int i = 0; i < numCars; i++) {
+			carArray[i] = Integer.parseInt(in.readLine());
+		}
+		
+		int counter = 0;
+		boolean running = true;
+		int carArrayIndex = 0;
+		
+		while (running) {
+			push(bridgeTest, carArray[carArrayIndex]);
+			if (sum(bridgeTest) <= maxWeight) {
+				counter++;
+				if (carArrayIndex == carArray.length - 1) {
+					running = false;
+				} else {
+					carArrayIndex++;
+				}
+			} else {
+				running = false;
+			}
+		}
+		System.out.println(counter);
+	}
 }
