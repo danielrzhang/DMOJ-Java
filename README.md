@@ -1,4 +1,4 @@
-# DMOJ-Java
+# DMOJ (Java)
 ![](/images/DMOJLogo.png)
 
 This repository contains solutions to my Java solutions/attempts at solutions for questions on DMOJ. Contains CCC solutions over the years as well.
